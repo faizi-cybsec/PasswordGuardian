@@ -7,7 +7,7 @@
 <p>
   <strong>Analyze • Generate • Verify • Protect</strong>
 </p>
-<img width="929" height="961" alt="Screenshot 2026-09-25 234637" src="https://github.com/user-attachments/assets/0d534ad5-edce-4db1-b589-519294661f4d" />
+<img width="750" height="961" alt="Screenshot 2026-09-25 234637" src="https://github.com/user-attachments/assets/0d534ad5-edce-4db1-b589-519294661f4d" />
 
 <p>
   A terminal-based cybersecurity tool for analyzing password strength,
@@ -611,11 +611,6 @@ If you want to improve Password Guardian:
 
 ### 1. Fork the repository
 
-```bash
-git fork
-```
-
-Or use GitHub's **Fork** button.
 
 ### 2. Clone your fork
 
