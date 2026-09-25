@@ -1,0 +1,16 @@
+@
+.vs/
+obj/
+x64/
+Debug/
+Release/
+*.user
+*.suo
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.log
+reports/*
+!reports/.gitkeep
+
