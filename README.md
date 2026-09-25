@@ -1,10 +1,10 @@
 # 🛡️ Password Guardian
 ### *AI-Powered Password Security Analyzer & Threat Assessment Suite*
 
-[![C++ Version](https://shields.io)](https://cppreference.com)
-[![Platform Compatibility](https://shields.io)](https://cmake.org)
-[![License: MIT](https://shields.io)](LICENSE)
-[![Security Focus](https://shields.io)](https://github.com)
+[![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=cplusplus&logoColor=white)](https://en.cppreference.com/w/cpp/17)
+[![CMake](https://img.shields.io/badge/CMake-Build_System-064F8C?logo=cmake&logoColor=white)](https://cmake.org/)
+[![License](https://img.shields.io/github/license/faizi-cybsec/PasswordGuardian?color=green)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/faizi-cybsec/PasswordGuardian?style=flat)](https://github.com/faizi-cybsec/PasswordGuardian/stargazers)
 
 **Password Guardian** is a comprehensive, production-grade console security suite engineered to evaluate, score, and simulate threats against authentication credentials. Developed as an advanced academic milestone, it wraps multi-layered cryptographic checks, Shannon Entropy evaluations, and k-Anonymity breach verification engines inside an intuitive, ANSI-colored dashboard.
 
