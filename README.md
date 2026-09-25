@@ -1,12 +1,13 @@
 <div align="center">
 
-# 🔐 PasswordGuardian
+# 🔐 Password Guardian
 
 ### Password Security Analyzer & Live Breach Checker
 
 <p>
   <strong>Analyze • Generate • Verify • Protect</strong>
 </p>
+<img width="929" height="961" alt="Screenshot 2026-09-25 234637" src="https://github.com/user-attachments/assets/0d534ad5-edce-4db1-b589-519294661f4d" />
 
 <p>
   A terminal-based cybersecurity tool for analyzing password strength,
@@ -44,9 +45,9 @@
 
 ## 🛡️ Overview
 
-**PasswordGuardian** is a C++-based password security toolkit designed to help users understand and improve password security through practical analysis.
+**Password Guardian** is a C++ based password security toolkit designed to help users understand and improve password security through practical analysis.
 
-Instead of simply telling you whether a password is "strong" or "weak", PasswordGuardian examines multiple security characteristics such as:
+Instead of simply telling you whether a password is "strong" or "weak", Password Guardian examines multiple security characteristics such as:
 
 * Password length
 * Character diversity
@@ -57,7 +58,7 @@ Instead of simply telling you whether a password is "strong" or "weak", Password
 
 It also provides a password generator, security recommendations, and an educational attack simulation designed to demonstrate why weak passwords are dangerous.
 
-> **PasswordGuardian is an educational security tool. It is designed to help users understand password security and make better password choices.**
+> **Password Guardian is an educational security tool. It is designed to help users understand password security and make better password choices.**
 
 ---
 
@@ -67,7 +68,7 @@ It also provides a password generator, security recommendations, and an educatio
 
 Evaluate passwords using multiple characteristics instead of relying only on length.
 
-PasswordGuardian can analyze:
+Password Guardian can analyze:
 
 * Length
 * Uppercase characters
@@ -81,7 +82,7 @@ PasswordGuardian can analyze:
 
 ### 📊 Shannon Entropy Analysis
 
-PasswordGuardian calculates **Shannon entropy** to provide an additional statistical perspective on password complexity.
+Password Guardian calculates **Shannon entropy** to provide an additional statistical perspective on password complexity.
 
 Entropy can help demonstrate how much uncertainty exists within a password and why larger, more diverse character spaces generally provide stronger resistance against guessing.
 
@@ -89,7 +90,7 @@ Entropy can help demonstrate how much uncertainty exists within a password and w
 
 ### ⏱️ Crack-Time Estimation
 
-PasswordGuardian provides an estimated crack-time calculation based on password characteristics and configurable assumptions.
+Password Guardian provides an estimated crack-time calculation based on password characteristics and configurable assumptions.
 
 The purpose is educational:
 
@@ -118,13 +119,13 @@ Welcome123
 Faizan@123
 ```
 
-PasswordGuardian can generate significantly stronger alternatives.
+Password Guardian can generate significantly stronger alternatives.
 
 ---
 
 ### 🌐 Have I Been Pwned Integration
 
-PasswordGuardian can check whether a password appears in the **Have I Been Pwned Pwned Passwords** dataset.
+Password Guardian can check whether a password appears in the **Have I Been Pwned Pwned Passwords** dataset.
 
 The implementation is designed around the API's privacy-preserving **k-anonymity** approach.
 
@@ -141,7 +142,7 @@ Learn more:
 
 ### 🧪 Educational Attack Simulation
 
-PasswordGuardian includes an educational attack-simulation component to demonstrate how password guessing can work against weak passwords.
+Password Guardian includes an educational attack-simulation component to demonstrate how password guessing can work against weak passwords.
 
 The purpose is **security education**, not unauthorized access.
 
@@ -159,7 +160,7 @@ It helps users understand concepts such as:
 
 ### 🛡️ Security Recommendations
 
-PasswordGuardian provides practical recommendations based on password-analysis results.
+Password Guardian provides practical recommendations based on password-analysis results.
 
 Examples include:
 
@@ -175,7 +176,7 @@ Examples include:
 
 ### 💻 Terminal Interface
 
-PasswordGuardian is designed around a terminal-based interface with ANSI styling.
+Password Guardian is designed around a terminal-based interface with ANSI styling.
 
 The interface focuses on:
 
@@ -207,13 +208,13 @@ Admin@2026
 Welcome#123
 ```
 
-PasswordGuardian approaches password evaluation from several angles rather than relying on a single "strong/weak" rule.
+Password Guardian approaches password evaluation from several angles rather than relying on a single "strong/weak" rule.
 
 ---
 
 ## 🔐 Security Model
 
-PasswordGuardian combines several concepts when evaluating passwords:
+Password Guardian combines several concepts when evaluating passwords:
 
 ```text
                   ┌──────────────────────┐
@@ -263,17 +264,25 @@ The result is intended to give users a broader understanding of password securit
 PasswordGuardian/
 │
 ├── include/
-│   ├── ...
-│   └── ...
+│   ├── AttackSimulator.h
+|   ├── Entropy.h
+|   ├── HIBP.h
+|   ├── PasswordAnalyzer.h
+|   ├── PasswordGenerator.h
+│   └── Utils.h
 │
 ├── src/
-│   ├── ...
-│   └── ...
+│   ├── AttackSimulator.cpp
+|   ├── Entropy.cpp
+|   ├── HIBP.cpp
+|   ├── PasswordAnalyzer.cpp
+|   ├── PasswordGenerator.cpp
+|   ├── Utils.cpp
+│   └── main.cpp
 │
 ├── CMakeLists.txt
 ├── README.md
-├── LICENSE
-└── ...
+└── LICENSE
 ```
 
 The project separates headers and implementation files to keep the codebase organized and maintainable.
@@ -284,7 +293,7 @@ The project separates headers and implementation files to keep the codebase orga
 
 ## Prerequisites
 
-Before building PasswordGuardian, make sure you have:
+Before building Password Guardian, make sure you have:
 
 * A C++17-compatible compiler
 * CMake
@@ -355,7 +364,7 @@ Depending on your platform and CMake generator, the resulting executable may be 
 
 # ▶️ Run
 
-After building, run the generated PasswordGuardian executable.
+After building, run the generated Password Guardian executable.
 
 ### Linux/macOS
 
@@ -383,20 +392,20 @@ The exact path depends on the compiler and CMake generator being used.
 
 # 🖥️ Usage
 
-After launching PasswordGuardian, use the terminal interface to access the available security functions.
+After launching Password Guardian, use the terminal interface to access the available security functions.
 
 A typical workflow looks like:
 
 ```text
 ┌─────────────────────────────────────────────┐
-│              PASSWORDGUARDIAN               │
+│              PASSWORD GUARDIAN              │
 ├─────────────────────────────────────────────┤
 │                                             │
-│  [1] Analyze Password                      │
-│  [2] Generate Password                     │
-│  [3] Check Password Exposure               │
-│  [4] Attack Simulation                     │
-│  [5] Security Recommendations              │
+│  [1] Analyze Password                       │
+│  [2] Generate Password                      │
+│  [3] Check Password Exposure                │
+│  [4] Attack Simulation                      │
+│  [5] Security Recommendations               │
 │  [0] Exit                                   │
 │                                             │
 └─────────────────────────────────────────────┘
@@ -432,7 +441,7 @@ The exact output depends on the password and the current implementation.
 
 # 🌐 Pwned Passwords Privacy
 
-PasswordGuardian's breach-checking functionality is designed around the **Have I Been Pwned Pwned Passwords range API**.
+Password Guardian's breach-checking functionality is designed around the **Have I Been Pwned Pwned Passwords range API**.
 
 The process can be summarized as:
 
@@ -470,7 +479,7 @@ According to the HIBP documentation, the range API receives the first five chara
 
 # ⚠️ Important Security Notes
 
-PasswordGuardian is an **educational security tool**, not a replacement for a professional password manager or enterprise identity-security platform.
+Password Guardian is an **educational security tool**, not a replacement for a professional password manager or enterprise identity-security platform.
 
 ### Crack-time estimates
 
@@ -510,13 +519,13 @@ It should only be used against:
 * Explicitly authorized environments
 * Educational lab environments
 
-Never use PasswordGuardian to attempt unauthorized access to accounts or systems.
+Never use Password Guardian to attempt unauthorized access to accounts or systems.
 
 ---
 
 # 🎯 Project Goals
 
-PasswordGuardian was created with several goals:
+Password Guardian was created with several goals:
 
 ### 1. Learn Cybersecurity Through Code
 
@@ -598,7 +607,7 @@ Breach Checking
 
 Contributions are welcome.
 
-If you want to improve PasswordGuardian:
+If you want to improve Password Guardian:
 
 ### 1. Fork the repository
 
@@ -673,7 +682,7 @@ Please **never include real passwords, credentials, API keys, or other sensitive
 
 # 🔐 Responsible Use
 
-PasswordGuardian is intended for:
+Password Guardian is intended for:
 
 * Cybersecurity education
 * Password-security awareness
@@ -690,7 +699,7 @@ Always obtain permission before performing security testing against systems you 
 
 # 📜 License
 
-PasswordGuardian is released under the **MIT License**.
+Password Guardian is released under the **MIT License**.
 
 See the [LICENSE](LICENSE) file for the complete license text.
 
@@ -702,7 +711,7 @@ Special thanks to the security community and the open-source projects and standa
 
 ### Have I Been Pwned
 
-PasswordGuardian uses the **Pwned Passwords** service for compromised-password checking.
+Password Guardian uses the **Pwned Passwords** service for compromised-password checking.
 
 Learn more:
 
@@ -724,13 +733,13 @@ GitHub:
 https://github.com/faizi-cybsec
 
 LinkedIn:
-https://www.linkedin.com/in/fayzn-ahmed/
+https://www.linkedin.com/in/faizi-cybsec/
 
 ---
 
 <div align="center">
 
-### 🔐 PasswordGuardian
+### 🔐 Password Guardian
 
 **Analyze • Generate • Verify • Protect**
 
