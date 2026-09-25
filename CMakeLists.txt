@@ -5,11 +5,11 @@ project(PasswordGuardianPro LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Tell the compiler to look in the current directory for header (.h) files
-include_directories(.)
+# Point CMake to your new headers folder
+include_directories(include)
 
-# Automatically gather all your source (.cpp) files in this folder
-file(GLOB SOURCES "*.cpp")
+# Find all source files inside the src folder
+file(GLOB SOURCES "src/*.cpp")
 
 # Define the final executable program output
 add_executable(PasswordGuardianPro ${SOURCES})
