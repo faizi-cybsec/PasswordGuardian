@@ -1,130 +1,143 @@
-# Password Guardian Pro
-### AI Password Security Analyzer — v2.0
+# 🛡️ Password Guardian
+### *AI-Powered Password Security Analyzer & Threat Assessment Suite*
 
-Programming Fundamentals Course Project
-Department: BS Cyber Security
-Developer: Faizan Ahmed
-University: Superior University
+[![C++ Version](https://shields.io)](https://cppreference.com)
+[![Platform Compatibility](https://shields.io)](https://cmake.org)
+[![License: MIT](https://shields.io)](LICENSE)
+[![Security Focus](https://shields.io)](https://github.com)
 
-Password Guardian Pro is the polished, professional version of the original
-Password Guardian tool. Every core feature has been preserved and upgraded —
-the password strength analysis, the hand-written SHA-1 implementation, the
-Have I Been Pwned breach check, and the password generator — while the
-console UI has been made consistent from screen to screen so the whole
-program feels like a single piece of security software instead of a set of
-separate demos.
+**Password Guardian** is a comprehensive, production-grade console security suite engineered to evaluate, score, and simulate threats against authentication credentials. Developed as an advanced academic milestone, it wraps multi-layered cryptographic checks, Shannon Entropy evaluations, and k-Anonymity breach verification engines inside an intuitive, ANSI-colored dashboard.
 
-## Features
+---
 
-- **Password Strength Analyzer** — length, character classes, unique
-  character count and diversity, dictionary words, common passwords,
-  keyboard patterns, repeated characters/words, sequential letters/numbers,
-  ascending/descending patterns, years, names, emails, phone-number-like
-  digit runs, date-of-birth-like digit runs, spaces, unicode characters,
-  consecutive repeated symbols, predictable leet-speak substitutions, and
-  weak prefixes/suffixes.
-- **Entropy Engine** — entropy in bits, complexity label, search space, and
-  a plain-English explanation of what entropy means.
-- **Crack Time Estimation** — online, offline, GPU, dictionary, hybrid and
-  brute-force attack estimates, formatted from seconds up to millions of
-  years.
-- **Weighted Security Score (0–100)** with letter grades A+ through F and a
-  plain-English strength label (Very Weak → Very Strong).
-- **Threat Level** — SAFE / LOW / MEDIUM / HIGH / CRITICAL, color-coded.
-- **AI Explanation Engine** — explains *why* a password scored the way it
-  did (low entropy, dictionary words, repeated characters, predictable
-  sequences, weak suffixes, short length, low character diversity, etc.)
-  instead of just labeling it.
-- **AI Recommendations** — specific, actionable improvement tips.
-- **Password Security Dashboard** — a single professional report combining
-  every module above, with a consistent set of animated/visual ASCII
-  progress bars.
-- **Password Generator** — Easy / Medium / Strong / Military / Custom
-  levels, selectable lengths (8/12/16/20/24/32), toggleable character
-  types, an "avoid ambiguous characters" option, and multi-password
-  generation. The primary generated password is shown inside a bordered
-  box and is immediately run through the full dashboard.
-- **Attack Simulator (educational only)** — a visual, non-functional
-  simulation of dictionary, hybrid, rainbow-table, GPU brute-force and
-  plain brute-force attacks, paired with real crack-time estimates and a
-  closing "Overall Password Resistance" summary. It never performs an
-  actual attack.
-- **Security Facts** — 100+ built-in cybersecurity facts. One is shown as
-  a numbered "Cyber Tip" on every launch and on the Security Tips page,
-  and a plain "Did You Know?" fact is shown after every analysis.
-- **Have I Been Pwned Breach Check** — the k-Anonymity approach (only the
-  first 5 hash characters are ever sent), with a privacy explanation,
-  connection status, occurrence count and risk explanation.
-- **Professional startup sequence** — a project info panel followed by an
-  animated module-loading sequence and the tip of the session.
+## 🏛️ Academic Context
+- **Course:** Programming Fundamentals (Project Milestone)
+- **Department:** BS Cyber Security
+- **Developer:** [Faizan Ahmed](https://github.com/faizi-cybsec)
+- **Institution:** Superior University
 
-## Menu
+---
 
-```
-[1] Analyze Password
-[2] Generate Password
-[3] Breach Database
-[4] Attack Simulator (Educational)
-[5] Security Tips
-[6] About
-[0] Exit
+## 🎯 Key Capabilities & Core Engines
+
+### 🔍 1. Password Strength Analyzer
+Evaluates input credentials against multi-tier structural criteria using localized analysis routines:
+- **Pattern Matching:** Detects predictable keyboard paths, sequential character runs, leet-speak mutations, dates of birth, common prefixes, and structural suffixes.
+- **Diversity Profiling:** Scans for character space breadth, uniqueness ratios, and literal dictionary collisions.
+
+### 🧠 2. Shannon Entropy & Crack-Time Engine
+- **Mathematical Scoring:** Computes true mathematical entropy bits to map actual algorithmic search spaces.
+- **Brute-Force Benchmarks:** Projects real-world decryption estimates across distinct environments (Online, Offline, High-Performance GPU Arrays, and Hybrid Dictionary attacks).
+
+### 🤖 3. AI Explanation & Recommendation Engine
+- **Contextual Metrics:** Goes beyond metric output by explaining *why* structural patterns introduce systemic vulnerabilities.
+- **Actionable Advice:** Generates precise, dynamic suggestions to patch entropy weaknesses.
+
+### 🔑 4. Dynamic Generation & Simulation
+- **Military-Grade Generator:** Deploys structured policies (Easy, Medium, Strong, Military, Custom) with unique safety rules like "exclude ambiguous glyphs".
+- **Educational Attack Simulator:** Visualizes dictionary, rainbow table, and brute-force methodologies paired with an interactive cryptographic tips matrix featuring over 100+ cybersecurity insights.
+
+### 🌐 5. Zero-Knowledge HIBP Leak Checker
+- **k-Anonymity Integration:** Leverages raw `SHA-1` hashing routines locally. It transmits only the **first 5 characters** of the hex-hash to the *Have I Been Pwned API* via secure curl bindings, preserving zero-knowledge privacy constraints.
+
+---
+
+## 💻 Interactive Console Shell Interface
+
+The terminal shell organizes modules cleanly through a structured control deck:
+
+```text
+=====================================================
+               PASSWORD GUARDIAN PRO v2.0            
+=====================================================
+   [1] Analyze Password
+   [2] Generate Password
+   [3] Breach Database (HIBP Check)
+   [4] Attack Simulator (Educational)
+   [5] Security Tips Dashboard
+   [6] About the Software
+   [0] Exit Application
+=====================================================
 ```
 
-## Project Structure
+---
 
+## 📂 Project Architecture
+
+```text
+PasswordGuardian/
+├── include/                 # Logic declarations and header files
+│   ├── AttackSimulator.h    # Educational threat simulation schemas
+│   ├── Entropy.h            # Bit-entropy mathematics & crack-time matrices
+│   ├── HIBP.h               # Local SHA-1 hashing & API communication structure
+│   ├── PasswordAnalyzer.h   # Multi-pattern parsing & scoring logic
+│   ├── PasswordGenerator.h  # Custom profile generation array
+│   └── Utils.h              # ANSI layout engines, loaders, & tip arrays
+├── src/                     # Core system code implementations
+│   ├── main.cpp             # Terminal control deck and engine orchestrator
+│   ├── AttackSimulator.cpp
+│   ├── Entropy.cpp
+│   ├── HIBP.cpp
+│   ├── PasswordAnalyzer.cpp
+│   ├── PasswordGenerator.cpp
+│   └── Utils.cpp
+├── .gitignore               # Strict build/cache tracking ignore layer
+├── CMakeLists.txt           # Unified cross-platform build automation script
+└── LICENSE                  # MIT Open-Source Authorization File
 ```
-PasswordGuardianPro/
-├── main.cpp                   Menu, banner, startup screen, program entry
-├── Utils.h / Utils.cpp        Colors, display helpers, shared animated
-│                               loading bar, footer, box printer, facts
-├── PasswordAnalyzer.h/.cpp    Pattern analysis, scoring, AI explanations
-├── Entropy.h / Entropy.cpp    Entropy math and crack-time estimation
-├── HIBP.h / HIBP.cpp          SHA-1 implementation + breach checking
-├── PasswordGenerator.h/.cpp   Password generator
-├── AttackSimulator.h/.cpp     Educational (non-real) attack simulation
-├── PasswordGuardianPro.sln
-└── PasswordGuardianPro.vcxproj / .vcxproj.filters
-```
 
-## Requirements
+---
 
-- Windows 10+ recommended (for native ANSI color support)
-- Visual Studio 2022 with the "Desktop development with C++" workload
-- MSVC compiler, C++17 language standard
-- `curl` available on the PATH (used only for the Have I Been Pwned check;
-  every other feature works fully offline)
+## ⚙️ Compilation Environment Requirements
 
-## Building in Visual Studio 2022
+| Target Requirement | Description |
+| :--- | :--- |
+| **Operating System** | Windows 10+ (Recommended for native Virtual Terminal ANSI Colors), Linux, or macOS |
+| **Compiler Toolchain** | MSVC v143+, GCC 9+, or Clang 10+ |
+| **Language Standard** | `C++17` (`/std:c++17` or `-std=c++17`) |
+| **External Dependency** | `curl` must be present on your system's global environment PATH variable |
 
-1. Open `PasswordGuardianPro.sln`.
-2. Confirm **C++ Language Standard** is set to `/std:c++17` (already
-   configured in the provided `.vcxproj`).
-3. Build with **Build → Build Solution** (`Ctrl+Shift+B`).
-4. Run with **F5** (Debug) or **Ctrl+F5** (Run without debugging).
+---
 
-## Building from the command line
+## 🛠️ Build and Installation Instruction Matrix
 
-**g++ (MinGW or any POSIX system):**
+### Method 1: Cross-Platform Build Automation (Recommended)
+This approach leverages the embedded CMake build script. It supports native environments globally across Windows, Mac, or Linux systems:
+
 ```bash
-g++ -std=c++17 -Wall -Wextra main.cpp Utils.cpp PasswordAnalyzer.cpp \
-    Entropy.cpp HIBP.cpp PasswordGenerator.cpp AttackSimulator.cpp \
-    -o PasswordGuardianPro
+# 1. Create a clean out-of-source binary generation folder
+mkdir build && cd build
+
+# 2. Configure build files via CMake
+cmake ..
+
+# 3. Execute the compiler toolchain to build the binary
+cmake --build .
+
+# 4. Fire up the application module
+./PasswordGuardianPro
 ```
 
-**MSVC (Developer Command Prompt):**
-```bat
-cl /std:c++17 /EHsc main.cpp Utils.cpp PasswordAnalyzer.cpp Entropy.cpp ^
-   HIBP.cpp PasswordGenerator.cpp AttackSimulator.cpp ^
-   /Fe:PasswordGuardianPro.exe
+### Method 2: Native Visual Studio 2022 Integration
+1. Launch **Visual Studio 2022**.
+2. Select **Open a local folder** on the splash screen and select your cloned repository directory.
+3. Visual Studio will natively process the `CMakeLists.txt` profile and configure your target workspace cache automatically.
+4. Press **Ctrl + Shift + B** to execute a clean project build, and press **F5** to start execution.
+
+### Method 3: Manual Command Line Processing
+If you prefer raw execution workflows without a build automation framework:
+
+```bash
+# Using GCC / MinGW-w64 G++ Toolchain
+g++ -std=c++17 -Wall -Wextra src/*.cpp -Iinclude -o PasswordGuardianPro
+
+# Using MSVC Developer Command Prompt Shell
+cl /std:c++17 /EHsc src/*.cpp /Iinclude /Fe:PasswordGuardianPro.exe
 ```
 
-## Notes
+---
 
-- The Have I Been Pwned check requires an internet connection and `curl`.
-  Every other menu option works completely offline.
-- The Attack Simulator never performs a real attack against any system —
-  it only visualizes the concept and shows realistic time estimates
-  calculated from entropy.
-- Password Comparison, a Policy Checker, History, and a Report exporter
-  existed in an earlier version of this project. They were removed in
-  v2.0 to keep the menu focused on the seven features above.
+## 📝 Important Implementation Details
+- **Network Bound Constraints:** The *Have I Been Pwned* breach index requires an active internet connection to query curl boundaries. If connection parameters are unavailable, all other analysis engines continue executing completely offline.
+- **Threat Simulation Boundaries:** The interactive attack simulator is strictly an educational tool designed for proof-of-concept visual modeling. It does not interface with or run active attacks against remote verification layers.
+- **Privacy Controls:** Session history metrics are maintained entirely in volatility-bound runtime memory. Passwords are explicitly masked and never cached to disk files, safeguarding your session data.
